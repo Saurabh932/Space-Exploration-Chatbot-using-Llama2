@@ -30,8 +30,19 @@ PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "q
 
 chain_type_kwargs = {"prompt": PROMPT}
 
+# llm = CTransformers(
+#     model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",
+#     model_type="llama",
+#     config={'max_new_tokens': 512, 'temperature': 0.8}
+# )
+
+
+# Specify the S3 URL of your model
+s3_model_url = "s3://spaceexplorationbucket/llama-2-7b-chat.ggmlv3.q4_0.bin"
+
+# Initialize CTransformers with the S3 URL
 llm = CTransformers(
-    model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",
+    model=s3_model_url,
     model_type="llama",
     config={'max_new_tokens': 512, 'temperature': 0.8}
 )
@@ -41,7 +52,7 @@ qa = RetrievalQA.from_chain_type(
     chain_type="stuff",
     retriever=docsearch.as_retriever(search_kwargs={'k': 2}),
     return_source_documents=True,
-    chain_type_kwargs=chain_type_kwargs
+    chain_type_kwargs={"prompt": PROMPT}
 )
 
 @app.route("/")
