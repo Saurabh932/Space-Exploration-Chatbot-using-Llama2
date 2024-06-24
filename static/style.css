@@ -2,7 +2,7 @@ body,html{
 	height: 100%;
 	margin: 0;
 	background: rgb(44, 47, 59);
-   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+	background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
 	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
 }
 
@@ -13,7 +13,7 @@ body,html{
 .card{
 	height: 500px;
 	border-radius: 15px !important;
-	background-color: rgba(0,0,0,0.4) !important;
+	background-color: rgba(0,0,0,0.8) !important; /* Decreased transparency */
 }
 .contacts_body{
 	padding:  0.75rem 0 !important;
@@ -22,14 +22,17 @@ body,html{
 }
 .msg_card_body{
 	overflow-y: auto;
+	background-color: rgba(0,0,0,0.75) !important; /* Decreased transparency */
 }
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
 	border-bottom: 0 !important;
+	background-color: rgba(0,0,0,0.8) !important; /* Decreased transparency */
 }
 .card-footer{
-border-radius: 0 0 15px 15px !important;
+	border-radius: 0 0 15px 15px !important;
 	border-top: 0 !important;
+	background-color: rgba(0,0,0,0.8) !important; /* Decreased transparency */
 }
 .container{
 	align-content: center;
@@ -41,8 +44,8 @@ border-radius: 0 0 15px 15px !important;
 	color:white !important;
 }
 .search:focus{
-	 box-shadow:none !important;
-   outline:0px !important;
+	box-shadow:none !important;
+	outline:0px !important;
 }
 .type_msg{
 	background-color: rgba(0,0,0,0.3) !important;
@@ -51,9 +54,9 @@ border-radius: 0 0 15px 15px !important;
 	height: 60px !important;
 	overflow-y: auto;
 }
-	.type_msg:focus{
-	 box-shadow:none !important;
-   outline:0px !important;
+.type_msg:focus{
+	box-shadow:none !important;
+	outline:0px !important;
 }
 .attach_btn{
 	border-radius: 15px 0 0 15px !important;
@@ -92,13 +95,11 @@ border-radius: 0 0 15px 15px !important;
 	height: 70px;
 	width: 70px;
 	border:1.5px solid #f5f6fa;
-
 }
 .user_img_msg{
 	height: 40px;
 	width: 40px;
 	border:1.5px solid #f5f6fa;
-
 }
 .img_cont{
 	position: relative;
@@ -192,7 +193,7 @@ border-radius: 0 0 15px 15px !important;
 	z-index: 1;
 	position: absolute;
 	padding: 15px 0;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.7); /* Decreased transparency */
 	color: white;
 	border-radius: 15px;
 	top: 30px;
@@ -214,10 +215,10 @@ border-radius: 0 0 15px 15px !important;
 }
 .action_menu ul li:hover{
 	cursor: pointer;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.5);
 }
 @media(max-width: 576px){
 	.contacts_card{
-	margin-bottom: 15px !important;
-}
+		margin-bottom: 15px !important;
+	}
 }
