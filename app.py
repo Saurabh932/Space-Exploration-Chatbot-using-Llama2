@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embeddings
 from langchain_community.vectorstores import Pinecone
+from src.prompt import prompt_template
+
 import pinecone
 from langchain.prompts import PromptTemplate
 from langchain_community.llms import CTransformers
