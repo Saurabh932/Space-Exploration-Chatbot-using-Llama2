@@ -94,6 +94,7 @@ open up localhost: http://localhost:8080.
 - Flask
 - Meta Llama2
 - Pinecone
+- AWS(EC2, S3 Bucket)
 
 
 # Web Application Demo:
